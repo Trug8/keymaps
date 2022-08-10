@@ -183,18 +183,30 @@ enum combos {
   SD_TAB,
   JK_BSPC,
   KL_ENT,
+  L145_BSPC,
+  L156_ENT,
+  L245_BSPC,
+  L256_ENT,  
 };
 
 const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM L145_combo[] = {KC_P4, KC_P5, COMBO_END};
+const uint16_t PROGMEM L156_combo[] = {KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM L245_combo[] = {KC_AMPR, KC_UP, COMBO_END};
+const uint16_t PROGMEM L245_combo[] = {KC_UP, SFT_T(KC_MINS), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [WE_ESC] = COMBO(we_combo, KC_ESC),
   [SD_TAB] = COMBO(sd_combo, KC_TAB),
   [JK_BSPC] = COMBO(jk_combo, KC_BSPC),
   [KL_ENT] = COMBO(kl_combo, KC_ENT),
+  [L145_BSPC] = COMBO(L145_combo, KC_BSPC),
+  [L156_ENT] = COMBO(L156_combo, KC_ENT),
+  [L245_BSPC] = COMBO(L245_combo, KC_BSPC),
+  [L256_ENT] = COMBO(L245_combo, KC_ENT),
 };
 
 
