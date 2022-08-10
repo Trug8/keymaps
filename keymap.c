@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                            ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
                            │  SAVE   │         │    ↑    │    =    │    {    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    }    │    7    │    8    │    9    │    +    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┤
-                           │ CAPSLCK │    ←    │    ↓    │    →    │    [    ├─╯                ╰─┤    ]    │    4    │    5    │    6    │    -    │
+                           │ CAPSLCK │    ←    │    ↓    │    →    │    [    ├─╯                ╰─┤    ]    │    4  {BSP}  5  {ENT}  6    │    -    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┤
                            │  UNDO   │   CUT   │  COPY   │  PASTE  │    (    ││  MUTE  ││PLY/PSE ││    )    │    1    │    2    │    3    │    *    │
                            └─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┘
@@ -125,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                            ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
                            │   F1    │   F2    │   F3    │   F4    │   F5    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    !    │    @    │    #    │    $    │    %    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┤
-                           │   CTL   │   ALT   │   CMD   │   F11   │   F12   ├─╯                ╰─┤    ^    │    &    │    ↑    │    _    │    |    │
+                           │   CTL   │   ALT   │   CMD   │   F11   │   F12   ├─╯                ╰─┤    ^    │    &  {BSP}  ↑  {ENT}  _    │    |    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┤
                            │   F6    │   F7    │   F8    │   F9    │   F10   ││ RESET  ││ DEBUG  ││    `    │    ←    │    ↓    │    →    │    \    │
                            └─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┘
@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
    [_RAISE] = LAYOUT_saegewerk(
  //╷             ╷             ╷             ╷             ╷             ╷             ╷╷             ╷             ╷             ╷             ╷             ╷             ╷
     KC_F1        ,  KC_F2      ,  KC_F3      ,   KC_F4     ,   KC_F5     ,                               KC_EXLM    ,   KC_AT     ,   KC_HASH   ,    KC_DLR   ,  KC_PERC    ,
-
+       
     CTL_T        ,  ALT_T      ,  KC_LCMD    ,   KC_F11    ,   KC_F12    ,                               KC_CIRC    ,   KC_AMPR   ,   KC_UP     ,SFT_T(KC_MINS),SFT_T(KC_BSLS),
 
     KC_F6        ,  KC_F7      ,  KC_F8      ,   KC_F9     ,   KC_F10    ,    QK_BOOT   ,   DEBUG     ,  KC_GRV     ,   KC_LEFT   ,  KC_DOWN    ,    KC_RGHT   , KC_BSLS    ,
@@ -183,30 +183,30 @@ enum combos {
   SD_TAB,
   JK_BSPC,
   KL_ENT,
-  L145_BSPC,
-  L156_ENT,
-  L245_BSPC,
-  L256_ENT,  
+  L1B_BSPC,
+  L1E_ENT,
+  L2B_BSPC,
+  L2E_ENT,  
 };
 
 const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
-const uint16_t PROGMEM L145_combo[] = {KC_P4, KC_P5, COMBO_END};
-const uint16_t PROGMEM L156_combo[] = {KC_P5, KC_P6, COMBO_END};
-const uint16_t PROGMEM L245_combo[] = {KC_AMPR, KC_UP, COMBO_END};
-const uint16_t PROGMEM L245_combo[] = {KC_UP, SFT_T(KC_MINS), COMBO_END};
+const uint16_t PROGMEM L1B_combo[] = {KC_P4, KC_P5, COMBO_END};
+const uint16_t PROGMEM L1E_combo[] = {KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM L2B_combo[] = {KC_AMPR, KC_UP, COMBO_END};
+const uint16_t PROGMEM L2E_combo[] = {KC_UP, SFT_T(KC_MINS), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [WE_ESC] = COMBO(we_combo, KC_ESC),
   [SD_TAB] = COMBO(sd_combo, KC_TAB),
   [JK_BSPC] = COMBO(jk_combo, KC_BSPC),
   [KL_ENT] = COMBO(kl_combo, KC_ENT),
-  [L145_BSPC] = COMBO(L145_combo, KC_BSPC),
-  [L156_ENT] = COMBO(L156_combo, KC_ENT),
-  [L245_BSPC] = COMBO(L245_combo, KC_BSPC),
-  [L256_ENT] = COMBO(L245_combo, KC_ENT),
+  [L1B_BSPC] = COMBO(L145_combo, KC_BSPC),
+  [L1E_ENT] = COMBO(L156_combo, KC_ENT),
+  [L2B_BSPC] = COMBO(L245_combo, KC_BSPC),
+  [L2E_ENT] = COMBO(L245_combo, KC_ENT),
 };
 
 
