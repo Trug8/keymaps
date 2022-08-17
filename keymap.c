@@ -98,26 +98,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     │       NUM                                                 │
     └───────────────────────────────────────────────────────────┘
                            ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-                           │  SAVE   │         │   SCRSF │  SCRS   │    +    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    ↑ {VOLU}  7    │    8    │    9    │    =    │
+                           │  SAVE   │         │   SCRSF │  SCRS   │    +    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    1 {VOLU}  2    │    3    │    4    │    5    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┤
-                           │  UNDO   │   CUT   │   COPY  │ PASTE {BRU}  -    ├─╯                ╰─┤    ←  {BRD}  4  {BSP}  5  {ENT}  6    │         │
+                           │  UNDO   │   CUT   │   COPY  │ PASTE {BRU}  -    ├─╯                ╰─┤    ←  {BRD}  ↑  {BSP}  ↓  {ENT}  →    │    =    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┤
-                           │  CTL    │   ALT   │   CMD   │ ALLCOPY │    *    ││  MUTE  ││PLY/PSE ││    → {VOLD}  1    │    2    │    3    │    .    │
+                           │  CTL    │   ALT   │   CMD   │ ALLCOPY │    *    ││  MUTE  ││PLY/PSE ││    6 {VOLD}  7    │    8    │    9    │    0    │
                            └─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┘
-                                               │         │   SFT   │    /    │                    │    ▼    │    ↓    │    0    │
-                                               └─────────┴─────────┴─────────┘                    └───-─────┴─────────┴─────────┘ */
+                                               │         │   SFT   │    /    │                    │    ▼    │         │    .    │
+                                               └─────────┴─────────┴─────────┘                    └───-─────┴─────────┴─────────┘ */XXXXXXX
 
 
    [_NUM] = LAYOUT_saegewerk(
 //╷             ╷             ╷             ╷             ╷             ╷             ╷╷             ╷             ╷            ╷             ╷             ╷             ╷
 
-    LCMD(KC_S)  ,  XXXXXXX    ,  LSG(KC_3)  ,   LSG(KC_4) ,   KC_PPLS   ,                              KC_UP       ,   KC_P7    ,    KC_P8    ,    KC_P9    ,    KC_EQL   ,
+    LCMD(KC_S)  ,  XXXXXXX    ,  LSG(KC_3)  ,   LSG(KC_4) ,   KC_PPLS   ,                              KC_P1       ,   KC_P2    ,    KC_P3    ,    KC_P4     ,    KC_5    ,
 
-    LCMD(KC_Z)  ,  LCMD(KC_X) ,  LCMD(KC_C) ,   LCMD(KC_V),   KC_MINS   ,                              KC_LEFT     ,   KC_P4    ,    KC_P5    ,    KC_P6    ,    XXXXXXX  ,
+    LCMD(KC_Z)  ,  LCMD(KC_X) ,  LCMD(KC_C) ,   LCMD(KC_V),   KC_MINS   ,                              KC_RGHT     ,   KC_UP    ,    KC_DOWN  ,    KC_LEFT   ,    KC_EQL  ,
 
-    KC_LCTL     ,  KC_LALT    ,  KC_LCMD    ,   LCMD(KC_A),   KC_PAST   ,  KC_MUTE     ,  KC_MPLY    , KC_RGHT     ,   KC_P1    ,    KC_P2    ,    KC_P3    ,    KC_COMM  ,
+    KC_LCTL     ,  KC_LALT    ,  KC_LCMD    ,   LCMD(KC_A),   KC_PAST   ,  KC_MUTE     ,  KC_MPLY    , KC_P6       ,   KC_P7    ,    KC_P8    ,    KC_P9     ,    KC_P0   ,
 
-                                 _______    ,   KC_LSFT   ,   KC_BSLS   ,                              _______     ,   KC_DOWN  ,    KC_P0
+                                 _______    ,   KC_LSFT   ,   KC_BSLS   ,                              _______     ,   _______  ,    KC_COMM
 
  ),
 
