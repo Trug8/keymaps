@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     │      BASE                                                 │
     └───────────────────────────────────────────────────────────┘
                           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-                          │    Q    │    W  {ESC}  E    │    R    │    T    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    Y  {SCU}  U    │    I    │    O    │    P    │
+                          │    Q    │    W  {ESC}  E    │    R    │    T    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    Y  {SCU}  U    │    I    │    O  {DEL}  P    │
                           ├─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┤
                           │    A    │    S    │    D    │    F  {SCL}  G    ├─╯                ╰─┤    H  {SCR}  J  {BSP}  K  {ENT}  L    │    ;    │
                           ├─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┤
@@ -192,7 +192,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     enum combos {
     //L0
       WE_ESC,
-      //SD_TAB,
+      OP_DEL,
       JK_BSPC,
       KL_ENT,
 
@@ -223,7 +223,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 };
     //L0
     const uint16_t PROGMEM we_combo[]   = {KC_W, KC_E, COMBO_END};
-    //const uint16_t PROGMEM sd_combo[]   = {KC_S, KC_D, COMBO_END};
+    const uint16_t PROGMEM op_combo[]   = {KC_O, KC_P, COMBO_END};
     const uint16_t PROGMEM jk_combo[]   = {KC_J, KC_K, COMBO_END};
     const uint16_t PROGMEM kl_combo[]   = {KC_K, KC_L, COMBO_END};
     
@@ -252,7 +252,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     combo_t key_combos[COMBO_COUNT]     = {
       //L0
       [WE_ESC]   = COMBO(we_combo, KC_ESC),
-      //[SD_TAB]   = COMBO(sd_combo, KC_TAB),
+      [OP_DEL]   = COMBO(op_combo, KC_DEL),
       [JK_BSPC]  = COMBO(jk_combo, KC_BSPC),
       [KL_ENT]   = COMBO(kl_combo, KC_ENT),
       [KL_ENT]   = COMBO(kl_combo, KC_ENT),
