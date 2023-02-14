@@ -103,9 +103,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┤
                            │  UNDO   │   CUT   │   COPY  │ PASTE {BRU}  -    ├─╯                ╰─┤    ←  {BRD}  ↑  {BSP}  ↓  {ENT}  →    │    =    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┤
-                           │  CTL    │   ALT   │   CMD   │   SFT   │    *    ││  MUTE  ││PLY/PSE ││    1 {VOLD}  2    │    3    │    4    │    5    │
+                           │  CTL    │   WIN   │   ALT   │   SFT   │    *    ││  MUTE  ││PLY/PSE ││    1 {VOLD}  2    │    3    │    4    │    5    │
                            └─────────┴─────────┼─────────┼─────────┼─────────┤╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┘
-                                               │         │    /    │    ▼    │                    │    %    │    .    │         │
+                                               │         │    /    │    ▼    │                    │    %    │    .    │    ,    │
                                                └─────────┴─────────┴─────────┘                    └───-─────┴─────────┴─────────┘ */
 
 
@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 
     LCTL(KC_Z)  ,  LCTL(KC_X) ,  LCTL(KC_C) ,   LCTL(KC_V),   KC_MINS   ,                              KC_LEFT     ,   KC_UP    ,    KC_DOWN  ,    KC_RGHT   ,    KC_EQL  ,
 
-    KC_LCTL     ,  KC_LCMD    ,  KC_LALT    ,   KC_LSFT   ,   KC_PAST   ,  KC_MUTE     ,  KC_MPLY    , KC_P1       ,   KC_P2    ,    KC_P3    ,    KC_P4     ,    KC_5    ,
+    KC_LCTL     ,  KC_LWIN	  ,  KC_LALT    ,   KC_LSFT   ,   KC_PAST   ,  KC_MUTE     ,  KC_MPLY    , KC_P1       ,   KC_P2    ,    KC_P3    ,    KC_P4     ,    KC_5    ,
 
                                  _______    ,   KC_PSLS   ,   _______   ,                              KC_PERC     ,   KC_DOT   ,    KC_COMM      
  ),
