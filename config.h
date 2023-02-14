@@ -28,7 +28,7 @@ for more options.
 //#define NO_ACTION_TAPPING
 //#define NO_MUSIC_MODE
 
-#define COMBO_COUNT 17
+#define COMBO_COUNT 18
 
 //#define MOUSE_SPEED
 #define MOUSEKEY_DELAY            	10	
