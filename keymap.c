@@ -1,4 +1,4 @@
-                                        /*____________________________________WHEEL COME TRUG88 KEYMAP__________________________________*/
+                                        /*___________________________________welcome to TRUG88 keymap__________________________________*/
 
 #include QMK_KEYBOARD_H
 #include <stdio.h>
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                           ├─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┤
                           │    A    │    S    │    D    │    F  {SCL}  G    ├─╯                ╰─┤    H  {SCR}  J  {BSP}  K  {ENT}  L    │    ;    │
                           ├─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┤
-                          │ (CTL)Z  │ (ALT)X  │ (CMD)C  │    V    │    B    ││  MUTE  ││PLY/PSE ││    N  {SCD}  M    │    ,    │    .    │    /    │
+                          │ (CTL)Z  │ (WIN)X  │ (ALT)C  │    V    │    B    ││  MUTE  ││PLY/PSE ││    N  {SCD}  M    │    ,    │    .    │    /    │
                           └─────────┴─────────┼─────────┼─────────┼─────────┤╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┘
                                               │         │ SFT*TAB │ NUM*SPC │                    │ SYM * - │    !    │         │
                                               └─────────┴─────────┴─────────┘                    └─────────┴─────────┴─────────┘ */
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 
     KC_A        ,     KC_S    ,     KC_D    ,     KC_F    ,     KC_G    ,                               KC_H       ,     KC_J    ,     KC_K    ,     KC_L    ,     KC_SCLN ,
 
-    CTL_T(KC_Z) , ALT_T(KC_X) , CMD_T(KC_C) ,     KC_V    ,     KC_B    ,     KC_MUTE  ,   KC_MPLY   ,  KC_N       ,     KC_M    ,     KC_COMM ,     KC_DOT  ,     KC_SLSH ,
+    CTL_T(KC_Z) ,RWIN_T(KC_X) , ALT_T(KC_C) ,     KC_V    ,     KC_B    ,     KC_MUTE  ,   KC_MPLY   ,  KC_N       ,     KC_M    ,     KC_COMM ,     KC_DOT  ,     KC_SLSH ,
 
                                    _______  ,LSFT_T(KC_TAB), LT(_NUM,KC_SPC),                      LT(_SYM,KC_MINS) ,LSFT(KC_EXLM),     _______
  ),
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     │       NUM                                                 │
     └───────────────────────────────────────────────────────────┘
                            ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-                           │  ALLCOPY│   SAVE  │   SCRSF │  SCRS   │    +    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    6 {VOLU}  7    │    8    │    9    │    0    │
+                           │  ALLCOPY│   SAVE  │         │ Prt Scr │    +    │ ╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮╭╮ │    6 {VOLU}  7    │    8    │    9    │    0    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤ │╰╯╰╯╰╯╰╯╰╯╰╯╰╯╰╯│ ├─────────┼─────────┼─────────┼─────────┼─────────┤
                            │  UNDO   │   CUT   │   COPY  │ PASTE {BRU}  -    ├─╯                ╰─┤    ←  {BRD}  ↑  {BSP}  ↓  {ENT}  →    │    =    │
                            ├─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┤
@@ -112,11 +112,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
    [_NUM] = LAYOUT_saegewerk(
 //╷             ╷             ╷             ╷             ╷             ╷             ╷╷             ╷             ╷            ╷             ╷             ╷             ╷
 
-    LCMD(KC_A)  ,  LCMD(KC_S) ,  LSG(KC_3)  ,   LSG(KC_4) ,   KC_PPLS   ,                              KC_P6       ,   KC_P7    ,    KC_P8    ,    KC_P9     ,    KC_P0   ,
+    LCTL(KC_A)  ,  LCTL(KC_S) ,  LSG(KC_3)  ,   XXXXXXX  ,   KC_PPLS   ,                              KC_P6       ,   KC_P7    ,    KC_P8    ,    KC_P9     ,    KC_P0   ,
 
-    LCMD(KC_Z)  ,  LCMD(KC_X) ,  LCMD(KC_C) ,   LCMD(KC_V),   KC_MINS   ,                              KC_LEFT     ,   KC_UP    ,    KC_DOWN  ,    KC_RGHT   ,    KC_EQL  ,
+    LCTL(KC_Z)  ,  LCTL(KC_X) ,  LCTL(KC_C) ,   LCTL(KC_V),   KC_MINS   ,                              KC_LEFT     ,   KC_UP    ,    KC_DOWN  ,    KC_RGHT   ,    KC_EQL  ,
 
-    KC_LCTL     ,  KC_LALT    ,  KC_LCMD    ,   KC_LSFT   ,   KC_PAST   ,  KC_MUTE     ,  KC_MPLY    , KC_P1       ,   KC_P2    ,    KC_P3    ,    KC_P4     ,    KC_5    ,
+    KC_LCTL     ,  KC_LCMD    ,  KC_LALT    ,   KC_LSFT   ,   KC_PAST   ,  KC_MUTE     ,  KC_MPLY    , KC_P1       ,   KC_P2    ,    KC_P3    ,    KC_P4     ,    KC_5    ,
 
                                  _______    ,   KC_PSLS   ,   _______   ,                              KC_PERC     ,   KC_DOT   ,    KC_COMM      
  ),
